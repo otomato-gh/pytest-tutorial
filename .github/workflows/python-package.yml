@@ -3,7 +3,7 @@
 
 name: Python package
 
-on: [pushes]
+on: [push]
 
 jobs:
   build:
@@ -28,4 +28,10 @@ jobs:
         flake8 . --count --max-complexity=10 --max-line-length=127 --statistics
     - name: Test with pytest
       run: |
-        echo Add your testing here
+        pytest -rp
+    - name: Build an egg
+      run: |
+        python setup.py sdist
+    - name: Test with pytest
+      run: |
+        twine upload --config-file .pypirc dist/*
