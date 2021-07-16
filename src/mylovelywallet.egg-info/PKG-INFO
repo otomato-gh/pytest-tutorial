@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: mylovelywallet
+Version: 0.1
+Summary: pytest tutorial
+Home-page: https://github.com/mondbev1/pytest-tutorial
+Author: MondbevOmator MondbevOmator
+Author-email: contact@otomato.io
+License: MIT
+Project-URL: Bug Tracker, https://github.com/mondbev1/pytest-tutorial/issues
+Description: wallet
+        test
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
