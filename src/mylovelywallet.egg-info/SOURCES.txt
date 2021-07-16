@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/mylovelywallet.egg-info/PKG-INFO
+src/mylovelywallet.egg-info/SOURCES.txt
+src/mylovelywallet.egg-info/dependency_links.txt
+src/mylovelywallet.egg-info/top_level.txt
