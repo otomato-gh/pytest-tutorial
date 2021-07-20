@@ -37,4 +37,4 @@ jobs:
     - name: publish package with twine
       run: |
         # twine register dist/viki-pkg-1.0.0.tar.gz -r viki-pkg
-        twine upload --verbose --config-file .pypirc -r viki-pkg dist/* 
+        twine upload --verbose --config-file .viki_pipirc -r viki-pkg dist/* 
