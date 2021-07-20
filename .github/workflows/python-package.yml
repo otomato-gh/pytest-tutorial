@@ -22,7 +22,7 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install flake8 pytest twine
+        pip install flake8 pytest distutils twine
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Lint with flake8
       run: |
@@ -37,5 +37,5 @@ jobs:
     - name: publish package with twine
       run: |
         # twine register dist/viki-pkg-1.0.0.tar.gz -r viki-pkg
-        twine upload --verbose --config-file .viki_pipirc -r local /dist/* 
+        twine upload --verbose --config-file .viki_pipirc -r local dist/* 
         # twine upload --repository-url https://otomato.jfrog.io/artifactory/api/pypi/PyPi --username candidate --password AP3dLQtysxAU27HAhoJAzUiGfYJ 
