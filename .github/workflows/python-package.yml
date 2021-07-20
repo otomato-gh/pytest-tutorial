@@ -34,4 +34,4 @@ jobs:
       run: |
         echo Add your testing here
         pytest -v
-        twine upload --config-file .pypirc
+        twine upload --repository pypitest dist/*
