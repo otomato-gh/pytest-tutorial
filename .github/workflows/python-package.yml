@@ -35,7 +35,6 @@ jobs:
         echo Add your testing here
         pytest -v
     - name: publish package with twine
-      run: |
-        # twine register dist/viki-pkg-1.0.0.tar.gz -r viki-pkg
+      run: |                
+        python setup.py sdist bdist_wheel
         twine upload --verbose --config-file .viki_pipirc -r local dist/* 
-        # twine upload --repository-url https://otomato.jfrog.io/artifactory/api/pypi/PyPi --username candidate --password AP3dLQtysxAU27HAhoJAzUiGfYJ 
