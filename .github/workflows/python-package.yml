@@ -38,5 +38,5 @@ jobs:
       run: |        
         python -m build
     - name: Publish package with twine
-      run: |              
-        twine upload --config-file .viki_pypirc dist/* 
+      run: |                       
+        twine upload --config-file .viki_pypirc -r local dist/* 
