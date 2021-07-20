@@ -35,10 +35,8 @@ jobs:
         echo Add your testing here
         pytest -v
     - name: Create distribution
-      run: |
-        python -m pip install --upgrade build
+      run: |        
         python -m build
     - name: publish package with twine
-      run: |
-        python -m pip install --upgrade twine        
+      run: |              
         twine upload --verbose --config-file .viki_pipirc -r local dist/* 
