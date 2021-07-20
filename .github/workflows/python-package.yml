@@ -33,4 +33,4 @@ jobs:
     - name: Test with pytest
       run: |
         echo Add your testing here
-        pytest
+        pytest -v
