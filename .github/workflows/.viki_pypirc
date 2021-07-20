@@ -1,5 +1,7 @@
 [distutils]
-index-servers = local
+index-servers =
+    local
+
 [local]
 repository = https://otomato.jfrog.io/artifactory/api/pypi/PyPi/
 username = candidate
