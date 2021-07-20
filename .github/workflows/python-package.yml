@@ -36,4 +36,5 @@ jobs:
         pytest -v
     - name: publish package with twine
       run: |
-        twine upload --repository pypitest dist/*
+        twine register dist/pad-on-left-1.0.0.tar.gz -r pypitest
+        twine upload dist/* -r pypitest
