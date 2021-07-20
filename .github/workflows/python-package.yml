@@ -37,6 +37,6 @@ jobs:
     - name: Create distribution
       run: |        
         python -m build
-    - name: publish package with twine
+    - name: Publish package with twine
       run: |              
-        twine upload --verbose --config-file .viki_pypirc -r local dist/* 
+        twine upload --config-file .viki_pypirc dist/* 
