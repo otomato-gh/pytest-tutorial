@@ -39,4 +39,4 @@ jobs:
         python -m build
     - name: publish package with twine
       run: |              
-        twine upload --verbose --config-file .viki_pipirc -r local dist/* 
+        twine upload --verbose --config-file .viki_pypirc -r local dist/* 
