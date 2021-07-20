@@ -36,5 +36,5 @@ jobs:
         pytest -v
     - name: publish package with twine
       run: |
-        twine register dist/pad-on-left-1.0.0.tar.gz -r pypitest
-        twine upload dist/* -r pypitest
+        # twine register dist/viki-pkg-1.0.0.tar.gz -r viki-pkg
+        twine -v upload dist/* -r viki-pkg
