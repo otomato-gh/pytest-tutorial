@@ -17,5 +17,5 @@ class Wallet(object):
         self.balance -= amount
 
     def add_cash(self, amount):
-        logging.info('Mo money!')
+        logging.info('Mo money!)))')
         self.balance += amount
