@@ -11,9 +11,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Set up Python 
-      uses: actions/setup-python@v2
+    - name: checkout step
+      uses: actions/checkout@v2
       with:
         python-version: 3.8
     - name: Install dependencies
@@ -28,8 +27,9 @@ jobs:
         flake8 . --count --max-complexity=10 --max-line-length=127 --statistics
     - name: Test with pytest
       run: |
-        pytest -rp
-    - name: Publish the egg
+        pytest -v
+    - name: Build and publish
       run: |
-        cp .pypirc $HOME/
-        python3 setup.py sdist upload -r local
+        python setup.py sdist
+        twine upload -u ${{ secrets.PYPI_API_USER }} -p ${{ secrets.PYPI_API_TOKEN }} --repository-url https://otomato.jfrog.io/artifactory/api/pypi/PyPi dist/*
+    
