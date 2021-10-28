@@ -20,5 +20,5 @@ class Wallet(object):
         logging.info('Mo money!')
         self.balance += amount
   
-    def get_balance():
+    def get_balance(self):
         return self.balance
