@@ -31,7 +31,7 @@ jobs:
       run: |
         python -m pytest -vv
         
-    - name: deployment to jfrog
+    - name: deployment to otomato.jfrog
       run: | 
        python -m build  
        #package BUILDER
