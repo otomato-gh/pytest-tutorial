@@ -1,6 +1,8 @@
 import logging
 
+
 class InsufficientAmount(Exception):
+
     pass
 
 
@@ -19,6 +21,6 @@ class Wallet(object):
     def add_cash(self, amount):
         logging.info('Mo money!')
         self.balance += amount
-  
+
     def get_balance(self):
         return self.balance

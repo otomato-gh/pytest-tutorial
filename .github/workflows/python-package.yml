@@ -3,7 +3,7 @@
 
 name: Python package
 
-on: [pushes]
+on: [push]
 
 jobs:
   build:
@@ -26,6 +26,13 @@ jobs:
         # stop the build if there are Python syntax errors or undefined names
         flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
         flake8 . --count --max-complexity=10 --max-line-length=127 --statistics
+        
     - name: Test with pytest
       run: |
-        echo Add your testing here
+        python -m pytest -vv
+        
+    - name: deployment to otomato.jfrog
+      run: | 
+       python -m build  
+       #package BUILDER
+       twine upload --repository-url https://otomato.jfrog.io/artifactory/api/pypi/pypi-local --username ${{ secrets.USERNAME }} --password ${{ secrets.PASSWORD }} dist/*
